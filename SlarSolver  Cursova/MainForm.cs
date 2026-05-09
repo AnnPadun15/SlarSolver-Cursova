@@ -397,10 +397,10 @@ namespace SlarSolver
                         throw new InvalidOperationException($"Некоректне значення коефіцієнта A[{i + 1},{j + 1}].");
 
                     if (Math.Abs(value) > MaxAbsValue)
-                        throw new InvalidOperationException($"Значення коефіцієнта A[{i + 1},{j + 1}] занадто велике. Введіть число в межах від -1000000 до 1000000.");
+                        throw new InvalidOperationException($"Значення коефіцієнта A[{i + 1},{j + 1}] занадто велике. Введіть число в межах від -1000 до 1000.");
 
                     if (value != 0 && Math.Abs(value) < MinAbsValue)
-                        throw new InvalidOperationException($"Значення коефіцієнта A[{i + 1},{j + 1}] занадто мале. Введіть число більше за 1e-10 або 0.");
+                        throw new InvalidOperationException($"Значення коефіцієнта A[{i + 1},{j + 1}] занадто мале. Введіть число більше за 1e-4.");
 
                     matrix[i, j] = value;
                 }
@@ -409,10 +409,10 @@ namespace SlarSolver
                     throw new InvalidOperationException($"Некоректне значення вільного члена b[{i + 1}].");
 
                 if (Math.Abs(b) > MaxAbsValue)
-                    throw new InvalidOperationException($"Значення вільного члена b[{i + 1}] занадто велике. Введіть число в межах від -1000000 до 1000000.");
+                    throw new InvalidOperationException($"Значення вільного члена b[{i + 1}] занадто велике. Введіть число в межах від -1000 до 1000.");
 
                 if (b != 0 && Math.Abs(b) < MinAbsValue)
-                    throw new InvalidOperationException($"Значення вільного члена b[{i + 1}] занадто мале. Введіть число більше за 1e-10 або 0.");
+                    throw new InvalidOperationException($"Значення вільного члена b[{i + 1}] занадто мале. Введіть число більше за 1e-4.");
 
                 matrix[i, n] = b;
             }
