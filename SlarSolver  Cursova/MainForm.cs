@@ -12,8 +12,8 @@ namespace SlarSolver
     public class MainForm : Form
     {
         private int n = 2;
-        private const double MinAbsValue = 1e-10;
-        private const double MaxAbsValue = 1000000;
+        private const double MinAbsValue = 1e-4;
+        private const double MaxAbsValue = 1000;
         private TextBox[,] aBoxes;
         private TextBox[] bBoxes;
 
